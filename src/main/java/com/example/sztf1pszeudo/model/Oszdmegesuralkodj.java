@@ -2,12 +2,21 @@ package com.example.sztf1pszeudo.model;
 
 import java.util.ArrayList;
 
-public class Oszdmegesuralkodj {
+public final class Oszdmegesuralkodj {
 
     public static ArrayList<String> kadiklegkisebbelemstring=new ArrayList<>();
     public static ArrayList<String> osszefesulorendezesstring=new ArrayList<>();
     public static ArrayList<String> gyorsrendezesstring=new ArrayList<>();
     public static ArrayList<String> felezomaxkivalasztasstring=new ArrayList<>();
+
+    public static void Reset()
+    {
+        kadiklegkisebbelemstring=new ArrayList<>();
+        osszefesulorendezesstring=new ArrayList<>();
+        gyorsrendezesstring=new ArrayList<>();
+        felezomaxkivalasztasstring=new ArrayList<>();
+
+    }
 
     public static ArrayList<String> kadiklegkisebbelem(int[] x, int bal, int jobb, int k)
     {

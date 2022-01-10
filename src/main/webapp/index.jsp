@@ -19,12 +19,14 @@
     <input type="text" id="text" name="text"><br>
     <input type="submit" value="Submit">
 </form>
-
+<label>----------------------------  [ Optimalizalas ]  ----------------------------</label>
+<br>
 <label>[X] LKRSZO: lkrszo</label><br>
 <label>[X] Kincsestérkép: kincsesterkep</label><br>
 <label>[X] 0-1 Hátizsák = hatizsak</label><br>
 
-
+<label>----------------------------  [ Osszeépített ]  ----------------------------</label>
+<br>
 <label>[X] MaximumKiválogatás = maxkivalogat</label><br>
 <label>[X] Másolás és Maxkiválasztás = masolasesmaximumkivalasztas</label><br>
 <label>[X] Összeszámolja hányszeor szerepel a keresett elem = megszamolaseskereses</label><br>
@@ -38,53 +40,45 @@
 <label>[X] Kiválogatás és Maximumszamitas = kivalogatasesmaximumszamitas</label><br>
 <label>[X] Kiválogatás és Másolás = kivalogatasesmasolas</label><br>
 <label>----------------------------  [ Osszetett ]  ----------------------------</label>
+<br>
+<label>[X] masolas</label><br>
+<label>[X] Osszefuttatas</label><br>
+<label>[X] ModositottOsszefuttatas</label><br>
+<label>[X] KozoselemLetezese</label><br>
+<label>[X] Szetvalogat</label><br>
+<label>[X] SzetvalogatEgyTombbe</label><br>
+<label>[X] SzetvalogatasEredetiben</label><br>
 <br><br>
-<label>[X] Másolás = masolas</label><br>
-<label>[X] Összefuttatás = Osszefuttatas</label><br>
-<label>[X] Modositott Osszefuttatas = ModositottOsszefuttatas</label><br>
-<label>[X] Kozos elem Letezese = KozoselemLetezese</label><br>
-<label>[X] Szetvalogat = Szetvalogat</label><br>
-<label>[X] Szetvalogat Egy Tombbe = SzetvalogatEgyTombbe</label><br>
-<label>[X] Szetvalogatas Eredetiben = SzetvalogatasEredetiben</label><br>
+<label>----------------------------  [ Oszd meg és Uralkodj ]  ----------------------------</label><br>
+<label>[X] kadiklegkisebbelem</label><br>
+<label>[X] osszefesulorendezes</label><br>
+<label>[X] gyorsrendezes</label><br>
+<label>[X] felezomaximumkivalasztas</label><br>
+<label>----------------------------  [ rekurzív ]  ----------------------------</label><br>
+<label>[X] MaxKivalasztasRekurziv</label><br>
+<label>[X] Logaritmikuskeresesrekurziv</label><br>
+<label>[X] FibonacciIterativ</label><br>
+<label>[X] LinearisKeresesRekurziv</label><br>
+<label>[X] aniterativ</label><br>
+<label>[X] anrekurziv</label><br>
+<label>[X] anrekurzivfelezes</label><br>
+<label>[X] towerOfHanoi</label><br>
 <br><br>
-<label>----------------------------  [ Oszd meg és Uralkodj ]  ----------------------------</label>
-<br><br>
-<label>[X] K-adiklegkisebbelem = kadiklegkisebbelem</label><br>
-<label>[X] Összefésülő rendezés = osszefesulorendezes</label><br>
-<label>[X] Gyorsrendezés = gyorsrendezes</label><br>
-<label>[X] Felező Maximum Kiválasztás = felezomaximumkivalasztas</label><br>
-<label>[X] Logaritmikuskeresesrekurziv = Logaritmikuskeresesrekurziv</label><br>
-<label>[X] FibonacciIterativ = FibonacciIterativ</label><br>
-<label>[X] LinearisKeresesRekurziv = LinearisKeresesRekurziv</label><br>
-<label>[X] aniterativ = aniterativ</label><br>
-<label>[X] anrekurziv = anrekurziv</label><br>
-<label>[X] anrekurzivfelezes = anrekurzivfelezes</label><br>
-<label>[X] towerOfHanoi = towerOfHanoi</label><br>
-<br><br>
-<label>----------------------------  [ Rendezesek ]  ----------------------------</label>
-<br><br>
+<label>----------------------------  [ Rendezesek ]  ----------------------------</label><br>
 <label>[X] EgyszeruCseresRendezes</label><br>
 <label>[X] MinKivRendezes</label><br>
 <label>[X] BuborekRendezes</label><br>
 <label>[X] JavitottBuborekRendzes</label><br>
 <label>[X] BeillesztesesRendezes</label><br>
 <label>[X] JavitottBeillesztesesRendezes</label><br>
-<label>[X] NULL = NULL</label><br>
-<label>[X] NULL = NULL</label><br>
-<label>[X] NULL = NULL</label><br>
-<label>[X] NULL = NULL</label><br>
-<label>[X] NULL = NULL</label><br>
-<label>[X] NULL = NULL</label><br>
-
-
-<%
-for (String item: Osszeepitett.MaximumKivalogatas(Data.x1)
-) {
-out.println("<br>"+item);
-
-}
-%>
-
+<br><br>
+<label>----------------------------  [ Rendezesek ]  ----------------------------</label><br>
+<label>[X] logaritmuskeresesiterativ</label><br>
+<label>[X] eldontesrendezettbe</label><br>
+<label>[X] modositotteldontesrendezettbe</label><br>
+<label>[X] kivalogatasrendezettbe</label><br>
+<label>[X] modositottkivalogatasrendezettbe</label><br>
+<label>[X] megszamlalas</label><br>
 
 </body>
 </html>

@@ -2,13 +2,23 @@ package com.example.sztf1pszeudo.model;
 
 import java.util.ArrayList;
 
-public class Rekurziv {
+public final class Rekurziv {
     public static ArrayList<String> MaxKivalasztasRekurzivstring=new ArrayList<>();
     public static ArrayList<String> Logaritmikuskeresesrekurzivstring=new ArrayList<>();
     public static ArrayList<String> LinearisKeresesRekurzivstring=new ArrayList<>();
     public static ArrayList<String> anrekurzivstring=new ArrayList<>();
     public static ArrayList<String> anrekurzivfelezesstring=new ArrayList<>();
     public static ArrayList<String> towersofhanoistring=new ArrayList<>();
+
+    public static void Reset()
+    {
+        MaxKivalasztasRekurzivstring=new ArrayList<>();
+        Logaritmikuskeresesrekurzivstring=new ArrayList<>();
+        LinearisKeresesRekurzivstring=new ArrayList<>();
+        anrekurzivstring=new ArrayList<>();
+        anrekurzivfelezesstring=new ArrayList<>();
+        towersofhanoistring=new ArrayList<>();
+    }
 
     public static int MaxKivalasztasRekurziv(int[] a, int jobb)
     {

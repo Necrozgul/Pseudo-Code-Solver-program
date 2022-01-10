@@ -16,18 +16,19 @@ public class WebController {
     public String loadIndex(HttpSession session) {
         session.setAttribute("displayerror", "none");
         return "index.jsp";
+
     }
 
-    @PostMapping("/register")
-    public String registerNewUser(@RequestParam("commenttext") String text, @RequestParam("id") Integer id, HttpSession session)
-    {
-        return "main.jsp";
-    }
 
     @PostMapping("/distributor")
     public String Distributor(@RequestParam("text") String text, HttpSession session)
     {
+        Oszdmegesuralkodj.Reset();
+        Rekurziv.Reset();
+        text=text.trim();
         String returndata ="";
+
+        // Optimalizálás
         if (text.equals("lkrszo"))
         {
             for (String item: Optimalizalas.LKRSZO("CALLCENTER", "CALENDAR")
@@ -57,6 +58,7 @@ public class WebController {
             session.setAttribute("data", returndata);
             return "main.jsp";
         }
+        // Összeépített
         else if(text.equals("maxkivalogat"))
         {
             for (String item: Osszeepitett.MaximumKivalogatas(Data.x1)
@@ -189,6 +191,7 @@ public class WebController {
             return "main.jsp";
 
         }
+        // Összetett
         else if(text.equals("masolas"))
         {
             for (String item: Osszetett.Masolas(Data.x, Data.ertek)
@@ -266,6 +269,7 @@ public class WebController {
             return "main.jsp";
 
         }
+        // Oszd meg és uralkodj
         else if(text.equals("kadiklegkisebbelem"))
         {
             Oszdmegesuralkodj.kadiklegkisebbelem(Data.x,0,Data.x.length-1,8);
@@ -310,6 +314,7 @@ public class WebController {
             return "main.jsp";
 
         }
+        // Rekurziv
         else if(text.equals("MaxKivalasztasRekurziv"))
         {
             Rekurziv.MaxKivalasztasRekurziv(Data.x,Data.x.length-1);
@@ -396,6 +401,7 @@ public class WebController {
             return "main.jsp";
 
         }
+        // Rendezesek
         else if(text.equals("EgyszeruCseresRendezes"))
         {
             for (String item: Rendezesek.EgyszeruCseresRendezes(Data.x)) {
@@ -456,6 +462,78 @@ public class WebController {
             return "main.jsp";
 
         }
+        // Rendezettomb
+        else if(text.equals("logaritmuskeresesiterativ"))
+        {
+            for (String item: Rendezettömb.logaritmuskeresesiterativ(Data.x, 4)) {
+                returndata+=("<br>"+item);
+
+            }
+            session.setAttribute("data", returndata);
+            return "main.jsp";
+
+        }
+        else if(text.equals("eldontesrendezettbe"))
+        {
+            for (String item: Rendezettömb.eldontesrendezettbe(Data.x, 4)) {
+                returndata+=("<br>"+item);
+
+            }
+            session.setAttribute("data", returndata);
+            return "main.jsp";
+
+        }
+        else if(text.equals("modositotteldontesrendezettbe"))
+        {
+            for (String item: Rendezettömb.modositotteldontesrendezettbe(Data.x, 4,8)) {
+                returndata+=("<br>"+item);
+
+            }
+            session.setAttribute("data", returndata);
+            return "main.jsp";
+
+        }
+        else if(text.equals("kivalasztas"))
+        {
+            for (String item: Rendezettömb.kivalasztas(Data.x, 4)) {
+                returndata+=("<br>"+item);
+
+            }
+            session.setAttribute("data", returndata);
+            return "main.jsp";
+
+        }
+        else if(text.equals("kivalogatasrendezettbe"))
+        {
+            for (String item: Rendezettömb.kivalogatasrendezettbe(Data.x, 4)) {
+                returndata+=("<br>"+item);
+
+            }
+            session.setAttribute("data", returndata);
+            return "main.jsp";
+
+        }
+        else if(text.equals("modositottkivalogatasrendezettbe"))
+        {
+            for (String item: Rendezettömb.modositottkivalogatasrendezettbe(Data.x, 4,8)) {
+                returndata+=("<br>"+item);
+
+            }
+            session.setAttribute("data", returndata);
+            return "main.jsp";
+
+        }
+        else if(text.equals("megszamlalas"))
+        {
+            for (String item: Rendezettömb.megszamlalas(Data.x, Data.ertek)) {
+                returndata+=("<br>"+item);
+
+            }
+            session.setAttribute("data", returndata);
+            return "main.jsp";
+
+        }
+        //Nincsen elem
         else
         {
             returndata="A keresett pszeudo nem létezik!";

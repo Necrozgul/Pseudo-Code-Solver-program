@@ -15,7 +15,6 @@ public class Optimalizalas {
         }
     }
 
-    //Nem tökéletes még sajnos
     public static ArrayList<String> LKRSZO(String a, String b) {
         ArrayList<String>data=new ArrayList<>();
         int[][] seged = new int[a.length() + 1][b.length() + 1]; //a-vertical b-horizontal
