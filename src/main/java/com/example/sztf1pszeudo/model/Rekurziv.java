@@ -156,6 +156,7 @@ public final class Rekurziv {
         towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
         towersofhanoistring.add("Move disk "+ n + " from rod " +
                 from_rod +" to rod " + to_rod );
+        towersofhanoistring.add((String.valueOf(n)+String.valueOf(from_rod)+String.valueOf(to_rod)+String.valueOf(aux_rod)+""));
         towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
     }
 

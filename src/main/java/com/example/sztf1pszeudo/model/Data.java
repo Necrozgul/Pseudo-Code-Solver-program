@@ -1,50 +1,88 @@
 package com.example.sztf1pszeudo.model;
 
-public final class Data {
+public class Data {//final kiszedve
     public Data() {
     }
 
-    public int[] getX1() {
-        return x1;
+    public Data(String x1, String x2, int value1,int value2, int minvalue, int maxvalue, String lkrszo1, String lkrszo2) {
+
+        this.lkrszo1 = lkrszo1;
+        System.out.println(this.lkrszo1);
+        this.lkrszo2 = lkrszo2;
+        System.out.println(this.lkrszo2);
+        this.x1 = setarray(x1);
+        this.x2 = setarray(x2);
+        this.value1 = value1;
+        System.out.println(this.value1);
+        this.value2 = value2;
+        System.out.println(this.value2);
+        this.minvalue = minvalue;
+        System.out.println(this.minvalue);
+        this.maxvalue = maxvalue;
+        System.out.println(this.maxvalue);
+
+    }
+    public static int[][]setTerkep(String terkep)
+    {
+        return null;
+    }
+    private static int[] setarray(String array)
+    {
+        if (array.equals("-"))
+        {
+            return null;
+        }
+        else
+        {
+            array.split(",");
+            int[] createdarray;
+            createdarray=new int[array.split(",").length];
+            for (int i = 0; i < createdarray.length; i++) {
+                createdarray[i]=Integer.parseInt( array.split(",")[i]);
+                System.out.println(createdarray[i]);
+            }
+            return createdarray;
+
+        }
+
+    }
+    private static String setlkrszo1(String data)
+    {
+        if (data.equals("-"))
+        {
+            return null;
+        }
+        else
+        {
+            return data;
+        }
+    }
+    private static String setlkrszo2(String data)
+    {
+        if (data.equals("-"))
+        {
+            return null;
+        }
+        else
+        {
+            return data;
+        }
     }
 
-    public void setX1(int[] x1) {
-        this.x1 = x1;
-    }
+    public String lkrszo1;
+    public String lkrszo2;
+    public int[] x1;
+    public int[] x2;
+    public int[] x;
+    public int value1;
+    public int value2;
+    public int minvalue;
+    public int maxvalue;
 
-    public int[] getX2() {
-        return x2;
-    }
+    public int[] p;
+    public int[] w;
 
-    public void setX2(int[] x2) {
-        this.x2 = x2;
-    }
-
-    public int[] getX() {
-        return x;
-    }
-
-    public void setX(int[] x) {
-        this.x = x;
-    }
-
-    public static int getErtek() {
-        return ertek;
-    }
-
-    public static void setErtek(int ertek) {
-        Data.ertek = ertek;
-    }
-
-    public static int[] x1 = new int[] {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
-    public static int[] x2 = new int[] {2, 3, 5, 7, 11, 13, 17, 19};
-    public static int[] x = new int[] {3, 1, 6, 10, 8, 2, 7, 9, 4, 12, 11};
-    public static int ertek = 5;
-
-    public static int[] p = {2, 1, 3, 4};
-    public static int[] w = {2, 2, 1, 3};
-
-    public static int[][] terkep =
+    public int[][] terkep =
             {
                     {9, 1, 8, 1, 1},
                     {6, 0, 5, 4, 6},
